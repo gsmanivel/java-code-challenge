@@ -1,5 +1,6 @@
 package manman.ohmyjava;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -8,23 +9,19 @@ import javax.xml.transform.stream.StreamSource;
 
 public class KidsWithGreatestNumberOfCandies_1431 {
 	public static void main(String [] args) {
-		for(int i =0 ; i<getVal().length ; i++) {
-			System.out.println(getVal()[i]);
-		}
+		getVal().stream().forEach(val -> System.out.println(val));
 	}
 	
 	
-	public static boolean[] getVal() {
+	public static List<Boolean> getVal() {
 		int[] candies = { 2,3,5,1,3 };
 		int extraCandies = 3;
 
 		int maxInArray = Arrays.stream(candies).max().getAsInt();
-		boolean[] rest = new boolean[candies.length];
-		for(int i=0;i<candies.length;i++) {
-			if(candies[i]+extraCandies >=maxInArray) {
-				rest[i]=true;
-			}
-		}
+		List<Boolean> rest = new ArrayList<>();
+		Arrays.stream(candies).forEach( candy -> {
+			boolean b = (candy + extraCandies) >= maxInArray ? rest.add(true) : rest.add(false);
+		});
 		return rest;
 	
 	}
