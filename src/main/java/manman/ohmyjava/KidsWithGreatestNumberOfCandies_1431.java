@@ -8,9 +8,6 @@ import javax.xml.transform.stream.StreamSource;
 
 public class KidsWithGreatestNumberOfCandies_1431 {
 	public static void main(String [] args) {
-		int[] candies = { 2,3,5,1,3 };
-		int extraCandies = 3;
-
 		for(int i =0 ; i<getVal().length ; i++) {
 			System.out.println(getVal()[i]);
 		}
