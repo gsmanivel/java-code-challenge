@@ -8,29 +8,26 @@ import javax.xml.transform.stream.StreamSource;
 
 public class KidsWithGreatestNumberOfCandies_1431 {
 	public static void main(String [] args) {
-		
+		int[] candies = { 2,3,5,1,3 };
+		int extraCandies = 3;
+
 		for(int i =0 ; i<getVal().length ; i++) {
 			System.out.println(getVal()[i]);
-		}		 
+		}
 	}
 	
 	
 	public static boolean[] getVal() {
 		int[] candies = { 2,3,5,1,3 };
 		int extraCandies = 3;
-		
-		
-		int maxInArray = Arrays.stream(candies).max();
+
+		int maxInArray = Arrays.stream(candies).max().getAsInt();
 		boolean[] rest = new boolean[candies.length];
 		for(int i=0;i<candies.length;i++) {
 			if(candies[i]+extraCandies >=maxInArray) {
 				rest[i]=true;
 			}
-			
-			
-		Arrays.stream(candies).forEach(num -> System.out.println(num););
 		}
-		
 		return rest;
 	
 	}
