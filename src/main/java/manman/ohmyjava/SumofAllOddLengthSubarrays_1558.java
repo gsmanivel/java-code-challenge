@@ -1,11 +1,12 @@
 package manman.ohmyjava;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SumofAllOddLengthSubarrays_1558 {
     public static void main(String[] args) {
         SumofAllOddLengthSubarrays_1558 obj = new SumofAllOddLengthSubarrays_1558();
-        int[] arr = {10,11,12};
+        int[] arr = {10, 11, 12};
         int result = obj.sumOddLengthSubarrays(arr);
         System.out.println(result);
     }
@@ -14,8 +15,8 @@ public class SumofAllOddLengthSubarrays_1558 {
     public int sumOddLengthSubarrays(int[] arr) {
         int result = 0;
         ArrayList<Integer> oddNumList = new ArrayList<>();
-        for(int oddNumLoop=3;oddNumLoop<=arr.length;oddNumLoop++){
-            if(!(oddNumLoop % 2 ==0))
+        for (int oddNumLoop = 3; oddNumLoop <= arr.length; oddNumLoop++) {
+            if (!(oddNumLoop % 2 == 0))
                 oddNumList.add(oddNumLoop);
         }
 
