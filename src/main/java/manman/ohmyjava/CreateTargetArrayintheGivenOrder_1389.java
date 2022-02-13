@@ -24,7 +24,7 @@ public class CreateTargetArrayintheGivenOrder_1389 {
                 straightFlow= false;
                 flag = true;
             }
-
+            // This is to verify
             if (flag) {
                 boolean insertFlag=false;
                 for(int loop2=0; loop2<nums.length;loop2++){
@@ -42,3 +42,5 @@ public class CreateTargetArrayintheGivenOrder_1389 {
         return regularArray;
     }
 }
+
+
