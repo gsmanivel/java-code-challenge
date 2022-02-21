@@ -6,10 +6,12 @@ import java.util.Set;
 
 public class TwoNumSum_1 {
     public static void main(String[] args) {
+
         int[] array = {3, 5, -4, 8, 11, 1, -1, 6};
         int targetSum = 10;
         int[] result = twoNumberSum3(array, targetSum);
         Arrays.stream(result).forEach(item -> System.out.println(item));
+
 
 
     }
